@@ -1,0 +1,26 @@
+{
+  "name": "snapsecret_nodejs",
+  "version": "0.0.0",
+  "authors": [
+    "nick dreckshage <nicholasdreckshage@gmail.com>"
+  ],
+  "description": "1/2 snapchat. 1/2 postsecret.",
+  "main": "['public/javascripts/application.js', 'public/stylesheets/application.css']",
+  "license": "MIT",
+  "homepage": "www.snapsecret.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "handlebars": "1.0.0",
+    "ember": "1.0.0",
+    "jquery": "~2.0.3",
+    "momentjs": "~2.5.0"
+  }
+}

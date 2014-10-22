@@ -1,0 +1,200 @@
+@mixin courier($size) {
+  font-family:'Courier New', 'Courier';
+  font-size:$size;
+}
+
+$blackish   : #000000;
+$grayish    : #DDDDDD;
+$bluish     : #0A7B83;
+$greenish   : #2AA876;
+$yellowish  : #FFD265;
+$orangish   : #F19C65;
+$redish     : #CE4D45;
+
+#snapsecret{
+  @include courier(1.25em);
+  textarea{
+    resize:none;
+    @include courier(1em);
+    padding:1em;
+  }
+  .form-group{
+    margin-bottom:1em;
+  }
+  padding:1em;
+  header{
+    text-align:center;
+    padding:0 0 1em;
+    margin:0;
+    p:last-of-type{
+      margin:0;
+    }
+    .countdown{
+      display:inline-block;
+      width:125px;
+      text-align:right;
+      color:$grayish;
+      -webkit-transition:color .5s ease-in;
+      -moz-transition:color .5s ease-in;
+      -o-transition:color .5s ease-in;
+      transition:color .5s ease-in;
+      &.index-route{
+        color:$blackish;
+        &.countdown-warning{
+          color:$redish;
+        }
+      }
+    }
+    .btn{
+      font-size:1em;
+    }
+  }
+  .secret{
+    padding:1em 0;
+    margin:0;
+    .secret-index{
+      margin:0;
+      padding:0;
+      overflow-y: scroll;
+      padding:1em;
+      border:1px solid $grayish;
+      height:390px;
+      > p:last-of-type {
+        margin-bottom:0;
+      }
+      &:not(.nsa-check){
+        &.show-comments{
+          float:left;
+          width:50%;
+        }
+      }
+    }
+    .secret-comments{
+      width:47.5%;
+      margin-left:2.5%;
+      float:left;
+      height:390px;
+      border:1px solid $grayish;
+      padding:1em;
+      .comments{
+        height:300px;
+        overflow-y:scroll;
+        .comment{
+          border-bottom:1px solid $grayish;
+          padding:1em;
+          &:first-of-type{
+            padding-top:0;
+          }
+          &:last-of-type{
+            border-bottom:0;
+          }
+          p{
+            margin:0;
+          }
+          i{
+            color:$grayish;
+          }
+        }
+      }
+      form{
+        border-top:1px solid $grayish;
+        padding-top:1em;
+        .form-group{
+          margin:0;
+          float:left;
+          width:75%;
+          margin-right:2%;
+        }
+        .btn{
+          width:23%;
+          float:right;
+        }
+      }
+    }
+    .show-comments-btn{
+      margin-top:1em;
+    }
+    h1, h2, h3, h4, h5, h6, ul{
+      font-family:'Courier New', 'Courier';
+      margin:0 0 1em;
+    }
+    p{
+      margin:0 0 1em;
+    }
+    form{
+      .enabled{
+        color:$greenish;
+      }
+      .disabled{
+        color: $redish;
+      }
+      .optional{
+        display:inline-block;
+        width:200px;
+      }
+      .message-requirements{
+        font-size: .8em;
+        float: right;
+        margin-top: 1em;
+        color: $redish;
+        &.valid{
+          color: $greenish;
+        }
+        &.secret-invalid{
+          color: $grayish;
+        }
+      }
+    }
+    .ellipses{
+      background-image:url('/images/ellipses.gif');
+      width: 26px;
+      height: 4px;
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      left: 4px;
+    }
+    .callout {
+      margin: 0 0 1em;
+      padding: 1em;
+      border-left: 1em solid #eee;
+      h4{
+        margin:0;
+      }
+      &.callout-danger{
+        background-color: #fdf7f7;
+        border-color: #eed3d7;
+        h4{
+          color: #b94a48;
+        }
+      }
+      &.callout-info {
+        background-color: #f4f8fa;
+        border-color: #bce8f1;
+        h4{
+          color:#34789a;
+        }
+      }
+    }
+  }
+  footer{
+    text-align:center;
+    p{
+      margin-bottom:1em;
+    }
+    .social{
+      margin:0 0 1em;
+      height:25px;
+      overflow:hidden;
+      .fb-share-button{
+        top:-8px;
+        width:100px;
+        height:25px;
+        margin-right:10px;
+      }
+      .twitter-share-button{
+        width:85px !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<header>
+  <p><strong {{action navigateHome}}>snapsecret.</strong>&nbsp;<span>1/2 snapchat. 1/2 postsecret.</span></p>
+  <p>
+    <span {{bind-attr class=":countdown countdownWarning indexRoute"}}>{{countdown}} seconds.</span>
+    {{#link-to 'index' classNames='btn btn-default'}}read{{/link-to}}
+    {{#link-to 'confess' classNames='btn btn-default'}}confess{{/link-to}}
+  </p>
+</header>

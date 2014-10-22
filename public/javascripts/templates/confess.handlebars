@@ -1,0 +1,32 @@
+<div class="clearfix">
+  <form accept-charset="UTF-8" action="/confess" class="new_secret" id="new_secret" method="post" role="form">
+    <div class="form-group">
+      {{view Ember.TextArea
+          valueBinding=message.value
+          disabledBinding=disableForm
+          placeholder="tell us a secret..."
+          class="form-control"
+          rows="5"
+      }}
+      <span {{bind-attr class=":message-requirements message.valid disableForm:secret-invalid"}}>Secret between 10 and 500 words.</span>
+    </div>
+    <div class="form-group">
+      {{view Ember.TextField
+          valueBinding=name
+          disabledBinding=disableForm
+          placeholder="name (optional)"
+          class="form-control optional"
+      }}
+      {{view Ember.TextField
+          valueBinding=location
+          disabledBinding=disableForm
+          placeholder="location (optional)"
+          class="form-control optional"
+      }}
+      {{#view SnapSecret.CommentableButtonView}}
+        comments <span {{bind-attr class="commentable:enabled:disabled"}}>{{commentableCurrent}}</class>
+      {{/view}}
+    </div>
+    <input type="submit" class="btn btn-default" value="confess" {{action confessSecret}}{{bind-attr disabled=disableForm}}>
+  </form>
+</div>

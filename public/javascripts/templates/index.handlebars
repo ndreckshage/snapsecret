@@ -1,0 +1,72 @@
+<div {{bindAttr class=":secret-index nsaCheck showComments"}}>
+  {{#if nsaCheck}}
+    <p>
+      <span>you've read {{secretsRead}} secrets, are you in the NSA?&nbsp;</span>
+      <button class="btn btn-default" {{action confirmNSA}}>yes</button>&nbsp;
+      <button class="btn btn-default" {{action confirmNotNSA}}>no</button>
+    </p>
+  {{else}}
+    {{#if secret}}
+      <div><p>{{secret.message}}</p></div>
+      {{#if secret.name}}
+        {{#if secret.location}}
+          <p><i>Posted by: {{secret.name}} from {{secret.location}}</i></p>
+        {{else}}
+          <p><i>Posted by: {{secret.name}}</i></p>
+        {{/if}}
+      {{else}}
+        {{#if secret.location}}
+          <p><i>Posted from: {{secret.location}}</i></p>
+        {{/if}}
+      {{/if}}
+      <p><i>Seen by: {{secret.view_count}}</i></p>
+    {{else}}
+      <p {{bind-attr class="waitingMessage:hide:active"}}>all secrets sealed :(</p>
+      <p {{bind-attr class="waitingMessage:active:hide"}}>waiting for another<span class="ellipses"></span></p></p>
+      <p>{{#link-to 'confess'}}leak one{{/link-to}}.</p>
+    {{/if}}
+  {{/if}}
+</div>
+{{#unless nsaCheck}}
+  {{#if secret}}
+    {{#if commentable}}
+      {{#if showComments}}
+        <div class="secret-comments">
+          <div class="comments">
+            {{#each comments}}
+              <div class="comment">
+                <p>{{this.message}}&nbsp;<i>{{format-date this.timestamp}}</i></p>
+              </div>
+            {{else}}
+              <div class="comment">
+                <p><i>no comments...</i></p>
+              </div>
+            {{/each}}
+          </div>
+          <form accept-charset="UTF-8" action="/index" class="new_comment form-inline" id="new_comment" method="post" role="form">
+            <div class="form-group">
+              {{#if comment.valid}}
+                {{view Ember.TextField
+                    valueBinding=comment.value
+                    placeholder="add a comment..."
+                    class="form-control"
+                }}
+              {{else}}
+                {{view Ember.TextField
+                    disabled=true
+                    placeholder="one comment per secret..."
+                    class="form-control"
+                }}
+              {{/if}}
+            </div>
+            <input type="submit" class="btn btn-default" value="comment" {{action addComment}}{{bind-attr disabled=comment.inValid}}>
+          </form>
+        </div>
+        <button class="btn btn-default show-comments-btn" {{action toggleComments}}>hide comments</button>
+      {{else}}
+        <button class="btn btn-default show-comments-btn" {{action toggleComments}}>show comments</button>
+      {{/if}}
+    {{/if}}
+    {{#view SnapSecret.BlowTheWhistleButton}}blow the whistle{{/view}}
+  {{/if}}
+{{/unless}}

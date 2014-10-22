@@ -1,0 +1,11 @@
+{{#if failureMessage}}
+  <div class="callout callout-danger">
+    <h4>{{failureMessage}}</h4>
+  </div>
+{{else}}
+  {{#if successMessage}}
+    <div class="callout callout-info">
+      <h4>{{successMessage}}</h4>
+    </div>
+  {{/if}}
+{{/if}}

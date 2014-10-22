@@ -1,0 +1,1 @@
+web: node --debug build/app.js
