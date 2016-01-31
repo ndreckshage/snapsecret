@@ -47,7 +47,7 @@
     return io.on("connection", function(socket) {
       console.log("IO CONNECTION");
       socket.on("create secret", function(reqIO) {
-        reqIO.view_count = io.sockets.clients().length;
+        reqIO.view_count = io.engine.clientsCount;
         return _this._createSecret(reqIO, socket, function() {
           _this.totalRead += _this.activeSecret.view_count;
           _this.totalSpilled += 1;

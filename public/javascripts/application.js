@@ -2746,12 +2746,12 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 module.exports=require('yjRRnp');
 },{}],11:[function(require,module,exports){
 (function() {
-  var Ember, SnapSecret, io, moment, origin, socket;
+  var Ember, SnapSecret, moment, socket;
   Ember = require('ember');
   moment = require('moment');
-  io = window.io;
-  origin = location.origin.replace('www.', '').replace('://snap', '://ws.snap');
-  socket = io.connect(origin);
+  socket = window.io(location.origin, {
+    'transports': ['websocket', 'polling']
+  });
   window.SnapSecret = SnapSecret = Ember.Application.create();
   require('./controllers/application_controller.coffee')(SnapSecret, socket);
   require('./controllers/index_controller.coffee')(SnapSecret, socket);

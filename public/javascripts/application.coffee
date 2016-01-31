@@ -3,9 +3,8 @@
   moment = require 'moment'
 
   # Socket.io
-  io = window.io
-  origin = location.origin.replace('www.', '').replace('://snap', '://ws.snap')
-  socket = io.connect origin
+  # origin = location.origin.replace('www.', '').replace('://snap', '://ws.snap')
+  socket = window.io(location.origin, {'transports': ['websocket', 'polling']})
 
   # SnapSecret
   window.SnapSecret = SnapSecret = Ember.Application.create()

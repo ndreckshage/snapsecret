@@ -40,8 +40,10 @@ app.use express.static(path.join(__dirname, '../', 'public'))
 if app.get('env') is 'development'
   app.use express.errorHandler()
 
-server = http.createServer app
-io = require('socket.io').listen server
+server = http.Server app
+io = require('socket.io')(server, {
+  'transports': ['websocket', 'polling']
+})
 
 Secret = require('./models')('secret')()
 API = require('./api')()

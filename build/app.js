@@ -67,9 +67,11 @@
     app.use(express.errorHandler());
   }
 
-  server = http.createServer(app);
+  server = http.Server(app);
 
-  io = require('socket.io').listen(server);
+  io = require('socket.io')(server, {
+    'transports': ['websocket', 'polling']
+  });
 
   Secret = require('./models')('secret')();
 

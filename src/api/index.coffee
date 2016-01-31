@@ -27,8 +27,7 @@ API::initIO = (io) ->
   io.on "connection", (socket) =>
     console.log "IO CONNECTION"
     socket.on "create secret", (reqIO) =>
-      reqIO.view_count = io.sockets.clients().length
-      # console.log reqIO
+      reqIO.view_count = io.engine.clientsCount
       @_createSecret reqIO, socket, () =>
         # When this callback is called, activesecret send to sockets
         @totalRead += @activeSecret.view_count
