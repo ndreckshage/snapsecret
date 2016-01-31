@@ -2751,8 +2751,9 @@ module.exports=require('yjRRnp');
   moment = require('moment');
   io = window.io;
   host = location.origin.replace(/^https:\/\/www./, 'ws:\/\/');
-  console.log('host', host);
-  socket = io.connect(host);
+  socket = io.connect(host, {
+    secure: true
+  });
   window.SnapSecret = SnapSecret = Ember.Application.create();
   require('./controllers/application_controller.coffee')(SnapSecret, socket);
   require('./controllers/index_controller.coffee')(SnapSecret, socket);
@@ -3953,5 +3954,5 @@ module.exports = function(SnapSecret) {
 };
 
 
-},{}]},{},["liJAYh","cURfcw","eYslUM","P3IKI0",11,"yjRRnp"])
+},{}]},{},["liJAYh","cURfcw","eYslUM","yjRRnp","P3IKI0",11])
 ;

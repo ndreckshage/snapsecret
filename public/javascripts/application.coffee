@@ -5,8 +5,8 @@
   # Socket.io
   io = window.io
   host = location.origin.replace /^https:\/\/www./, 'ws:\/\/'
-  console.log('host', host)
-  socket = io.connect host
+  socket = io.connect host,
+    secure: true
 
   # SnapSecret
   window.SnapSecret = SnapSecret = Ember.Application.create()
