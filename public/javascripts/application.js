@@ -2746,10 +2746,11 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 module.exports=require('yjRRnp');
 },{}],11:[function(require,module,exports){
 (function() {
-  var Ember, SnapSecret, moment, socket;
+  var Ember, SnapSecret, moment, origin, socket;
   Ember = require('ember');
   moment = require('moment');
-  socket = window.io(location.origin, {
+  origin = location.origin.replace('www.', '').replace('://snap', '://ws.snap');
+  socket = window.io(origin, {
     'transports': ['websocket', 'polling']
   });
   window.SnapSecret = SnapSecret = Ember.Application.create();
