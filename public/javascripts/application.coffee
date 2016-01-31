@@ -4,7 +4,7 @@
 
   # Socket.io
   io = window.io
-  host = location.origin.replace /^https/, 'ws'
+  host = location.origin.replace /^https:\/\/www./, 'ws:\/\/'
   console.log('host', host)
   socket = io.connect host
 
