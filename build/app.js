@@ -7,8 +7,6 @@
 
   path = require('path');
 
-  console.log(process.env);
-
   app = express();
 
   mongoose = require('mongoose');

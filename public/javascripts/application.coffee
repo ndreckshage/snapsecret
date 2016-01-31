@@ -4,7 +4,7 @@
 
   # Socket.io
   io = window.io
-  host = location.origin.replace /^http/, 'ws'
+  host = location.origin.replace /^https/, 'ws'
   socket = io.connect host
 
   # SnapSecret

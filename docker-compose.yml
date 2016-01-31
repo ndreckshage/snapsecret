@@ -1,7 +1,7 @@
 snapsecret-data:
   image: busybox
   volumes:
-    - ~/data/db
+    - /data/db
 snapsecret-mongo:
   image: mongo:3.2.1
   environment:

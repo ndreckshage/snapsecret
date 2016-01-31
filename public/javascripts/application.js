@@ -2750,7 +2750,7 @@ module.exports=require('yjRRnp');
   Ember = require('ember');
   moment = require('moment');
   io = window.io;
-  host = location.origin.replace(/^http/, 'ws');
+  host = location.origin.replace(/^https/, 'ws');
   socket = io.connect(host);
   window.SnapSecret = SnapSecret = Ember.Application.create();
   require('./controllers/application_controller.coffee')(SnapSecret, socket);
@@ -3424,7 +3424,7 @@ function program10(depth0,data) {
   hashContexts = {};
   stack1 = helpers['with'].call(depth0, "stats", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  <div class=\"social\">\n    <div class=\"fb-share-button\" data-href=\"http://snapsecret.com\" data-type=\"button_count\"></div>\n    <a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-url=\"http://snapsecret.com\" data-text=\"1/2 snapchat. 1/2 postsecret.\"></a>\n    <a href=\"https://twitter.com/intent/tweet?button_hashtag=snappedsecret\" class=\"twitter-hashtag-button\">#snappedsecret</a>\n  </div>\n  ");
+  data.buffer.push("\n  <div class=\"social\">\n    <div class=\"fb-share-button\" data-href=\"https://www.snapsecret.com\" data-type=\"button_count\"></div>\n    <a href=\"https://twitter.com/share\" class=\"twitter-share-button\" data-url=\"https://www.snapsecret.com\" data-text=\"1/2 snapchat. 1/2 postsecret.\"></a>\n    <a href=\"https://twitter.com/intent/tweet?button_hashtag=snappedsecret\" class=\"twitter-hashtag-button\">#snappedsecret</a>\n  </div>\n  ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
@@ -3448,7 +3448,7 @@ function program10(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "use", options) : helperMissing.call(depth0, "link-to", "use", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("\n</footer>");
+  data.buffer.push("\n</footer>\n");
   return buffer;
   
 });

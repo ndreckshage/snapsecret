@@ -2,8 +2,6 @@ express = require 'express'
 http = require 'http'
 path = require 'path'
 
-console.log(process.env)
-
 app = express()
 
 mongoose = require 'mongoose'
