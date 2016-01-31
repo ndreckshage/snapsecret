@@ -3,7 +3,7 @@ snapsecret-data:
   volumes:
     - /data/db
 snapsecret-mongo:
-  image: mongo:3.2.1
+  image: 'tutum/mongodb:latest'
   environment:
     MONGODB_PASS: foobar
   volumes_from:

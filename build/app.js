@@ -7,11 +7,11 @@
 
   path = require('path');
 
-  app = express();
-
   mongoose = require('mongoose');
 
-  mongoUri = "mongodb://" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR + ":" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT + "/snapsecret";
+  app = express();
+
+  mongoUri = "mongodb://" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR + ":" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT + "/admin";
 
   mongoOpts = {
     user: 'admin',
