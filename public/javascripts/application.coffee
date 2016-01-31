@@ -4,7 +4,8 @@
 
   # Socket.io
   io = window.io
-  socket = io.connect location.origin
+  origin = location.origin.replace('www.', '').replace('://snap', '://ws.snap')
+  socket = io.connect origin
 
   # SnapSecret
   window.SnapSecret = SnapSecret = Ember.Application.create()

@@ -15,7 +15,7 @@
 
   mongoPort = process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT || 27017;
 
-  mongoDbName = process.env.SNAPSECRET_MONGO_ENV_MONGODB_NAME || "snapsecreet";
+  mongoDbName = process.env.SNAPSECRET_MONGO_ENV_MONGODB_NAME || "snapsecret";
 
   mongoUri = "mongodb://" + mongoAddr + ":" + mongoPort + "/" + mongoDbName;
 

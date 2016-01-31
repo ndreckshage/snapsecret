@@ -2746,11 +2746,12 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 module.exports=require('yjRRnp');
 },{}],11:[function(require,module,exports){
 (function() {
-  var Ember, SnapSecret, io, moment, socket;
+  var Ember, SnapSecret, io, moment, origin, socket;
   Ember = require('ember');
   moment = require('moment');
   io = window.io;
-  socket = io.connect(location.origin);
+  origin = location.origin.replace('www.', '').replace('://snap', '://ws.snap');
+  socket = io.connect(origin);
   window.SnapSecret = SnapSecret = Ember.Application.create();
   require('./controllers/application_controller.coffee')(SnapSecret, socket);
   require('./controllers/index_controller.coffee')(SnapSecret, socket);
@@ -3951,5 +3952,5 @@ module.exports = function(SnapSecret) {
 };
 
 
-},{}]},{},["liJAYh","cURfcw","eYslUM","yjRRnp","P3IKI0",11])
+},{}]},{},["liJAYh","cURfcw","eYslUM","P3IKI0","yjRRnp",11])
 ;
