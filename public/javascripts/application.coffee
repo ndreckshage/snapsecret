@@ -4,15 +4,7 @@
 
   # Socket.io
   io = window.io
-  secure = !!~location.origin.indexOf('https')
-
-  if secure
-    host = location.origin.replace /^https/, 'wss'
-  else
-    host = location.origin.replace /^http/, 'ws'
-
-  socket = io.connect host,
-    secure: secure
+  socket = io.connect location.origin
 
   # SnapSecret
   window.SnapSecret = SnapSecret = Ember.Application.create()
