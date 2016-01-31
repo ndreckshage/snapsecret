@@ -1,5 +1,5 @@
 (function() {
-  var API, Secret, api, app, db, express, http, indexRoute, io, mongoAddr, mongoDbName, mongoOpts, mongoPort, mongoUri, mongoose, path, server;
+  var API, Secret, allowCrossDomain, api, app, db, express, http, indexRoute, io, mongoAddr, mongoDbName, mongoOpts, mongoPort, mongoUri, mongoose, path, server;
 
   express = require('express');
 
@@ -33,6 +33,13 @@
   db.once('open', function() {
     return console.log('DB CONNECTION');
   });
+
+  allowCrossDomain = function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    return next();
+  };
+
+  app.use(allowCrossDomain);
 
   app.set('port', process.env.PORT || 3000);
 

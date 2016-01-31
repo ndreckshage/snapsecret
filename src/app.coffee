@@ -18,6 +18,12 @@ db.on 'error', console.error.bind(console, 'connection error:')
 db.once 'open', () ->
   console.log 'DB CONNECTION'
 
+allowCrossDomain = (req, res, next) ->
+  res.header("Access-Control-Allow-Origin", "*")
+  next()
+
+app.use allowCrossDomain
+
 app.set 'port', process.env.PORT || 3000
 app.set 'views', path.join(__dirname, '../', 'views')
 app.set 'view engine', 'jade'
@@ -27,6 +33,7 @@ app.use express.logger('dev')
 app.use express.json()
 app.use express.urlencoded()
 app.use express.methodOverride()
+
 app.use app.router
 app.use express.static(path.join(__dirname, '../', 'public'))
 
