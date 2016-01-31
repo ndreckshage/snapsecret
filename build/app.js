@@ -1,5 +1,5 @@
 (function() {
-  var API, Secret, api, app, db, express, http, indexRoute, io, mongoUri, mongoose, path, server;
+  var API, Secret, api, app, db, express, http, indexRoute, io, mongoOpts, mongoUri, mongoose, path, server;
 
   express = require('express');
 
@@ -11,9 +11,14 @@
 
   mongoose = require('mongoose');
 
-  mongoUri = "mongodb://" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR + ":" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT + "/snapsecret?pass=" + process.env.SNAPSECRET_MONGO_ENV_MONGODB_PASS;
+  mongoUri = "mongodb://" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR + ":" + process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT + "/snapsecret";
 
-  mongoose.connect(mongoUri);
+  mongoOpts = {
+    user: 'admin',
+    pass: process.env.SNAPSECRET_MONGO_ENV_MONGODB_PASS
+  };
+
+  mongoose.connect(mongoUri, mongoOpts);
 
   db = mongoose.connection;
 

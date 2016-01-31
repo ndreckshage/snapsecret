@@ -5,8 +5,11 @@ path = require 'path'
 app = express()
 
 mongoose = require 'mongoose'
-mongoUri = "mongodb://#{process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR}:#{process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT}/snapsecret?pass=#{process.env.SNAPSECRET_MONGO_ENV_MONGODB_PASS}"
-mongoose.connect mongoUri
+mongoUri = "mongodb://#{process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR}:#{process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT}/snapsecret"
+mongoOpts =
+  user: 'admin'
+  pass: process.env.SNAPSECRET_MONGO_ENV_MONGODB_PASS
+mongoose.connect mongoUri, mongoOpts
 db = mongoose.connection
 db.on 'error', console.error.bind(console, 'connection error:')
 db.once 'open', () ->
