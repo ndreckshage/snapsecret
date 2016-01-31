@@ -1,0 +1,18 @@
+snapsecret-data:
+  image: busybox
+  volumes:
+    - ~/data/db
+snapsecret-mongo:
+  image: mongo:3.2.1
+  environment:
+    MONGODB_PASS: foobar
+  volumes_from:
+    - snapsecret-data
+snapsecret-web:
+  build: ./
+  environment:
+    PORT: 3000
+  links:
+    - snapsecret-mongo
+  ports:
+    - 3000

@@ -1,4 +1,6 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"v9W4LI":[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"bootstrap":[function(require,module,exports){
+module.exports=require('P3IKI0');
+},{}],"P3IKI0":[function(require,module,exports){
 var global=self;(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 
 ; global.$ = require("jquery");
@@ -393,9 +395,7 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
-},{}],"bootstrap":[function(require,module,exports){
-module.exports=require('v9W4LI');
-},{}],"8gSien":[function(require,module,exports){
+},{}],"eYslUM":[function(require,module,exports){
 var global=self;(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 
 ; global.$ = require("jquery");
@@ -427,8 +427,8 @@ for(t&&t.data&&t.data.isRenderData&&(r=t,t="main"),n=r.data.view;!n.get("templat
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 },{}],"ember":[function(require,module,exports){
-module.exports=require('8gSien');
-},{}],"uCUMpF":[function(require,module,exports){
+module.exports=require('eYslUM');
+},{}],"cURfcw":[function(require,module,exports){
 var global=self;(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 /*
 
@@ -2714,10 +2714,10 @@ Handlebars.template = Handlebars.VM.template;
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 },{}],"handlebars":[function(require,module,exports){
-module.exports=require('uCUMpF');
+module.exports=require('cURfcw');
 },{}],"jquery":[function(require,module,exports){
-module.exports=require('z64Kyl');
-},{}],"z64Kyl":[function(require,module,exports){
+module.exports=require('liJAYh');
+},{}],"liJAYh":[function(require,module,exports){
 var global=self;(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 /*! jQuery v2.0.3 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
 //@ sourceMappingURL=jquery.min.map
@@ -2730,7 +2730,7 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
-},{}],"FCE48o":[function(require,module,exports){
+},{}],"yjRRnp":[function(require,module,exports){
 var global=self;(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 //! moment.js
 //! version : 2.5.0
@@ -2743,7 +2743,7 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 },{}],"moment":[function(require,module,exports){
-module.exports=require('FCE48o');
+module.exports=require('yjRRnp');
 },{}],11:[function(require,module,exports){
 (function() {
   var Ember, SnapSecret, host, io, moment, socket;
@@ -2767,7 +2767,7 @@ module.exports=require('FCE48o');
 })();
 
 
-},{"./controllers/application_controller.coffee":12,"./controllers/confess_controller.coffee":13,"./controllers/index_controller.coffee":14,"./helpers/moment_helper.coffee":15,"./router.coffee":16,"./routes/confess_route.coffee":17,"./routes/index_route.coffee":18,"./templates.js":19,"./views/application_view.coffee":20,"./views/blow_the_whistle_button_view.coffee":21,"./views/commentable_button_view.coffee":22,"ember":"8gSien","moment":"FCE48o"}],12:[function(require,module,exports){
+},{"./controllers/application_controller.coffee":12,"./controllers/confess_controller.coffee":13,"./controllers/index_controller.coffee":14,"./helpers/moment_helper.coffee":15,"./router.coffee":16,"./routes/confess_route.coffee":17,"./routes/index_route.coffee":18,"./templates.js":19,"./views/application_view.coffee":20,"./views/blow_the_whistle_button_view.coffee":21,"./views/commentable_button_view.coffee":22,"ember":"eYslUM","moment":"yjRRnp"}],12:[function(require,module,exports){
 module.exports = function(SnapSecret, socket) {
   return SnapSecret.ApplicationController = Ember.Controller.extend({
     needs: ['index', 'confess'],
@@ -3256,7 +3256,8 @@ module.exports = function(SnapSecret) {
 
 
 },{}],19:[function(require,module,exports){
-Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["application"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, hashTypes, hashContexts, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
@@ -3266,12 +3267,12 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.partial || (depth0 && depth0.partial)),stack1 ? stack1.call(depth0, "header", options) : helperMissing.call(depth0, "partial", "header", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial || depth0.partial),stack1 ? stack1.call(depth0, "header", options) : helperMissing.call(depth0, "partial", "header", options))));
   data.buffer.push("\n  <div class=\"secret clearfix\">\n    ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.partial || (depth0 && depth0.partial)),stack1 ? stack1.call(depth0, "messages", options) : helperMissing.call(depth0, "partial", "messages", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial || depth0.partial),stack1 ? stack1.call(depth0, "messages", options) : helperMissing.call(depth0, "partial", "messages", options))));
   data.buffer.push("\n    ");
   hashTypes = {};
   hashContexts = {};
@@ -3280,13 +3281,14 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.partial || (depth0 && depth0.partial)),stack1 ? stack1.call(depth0, "footer", options) : helperMissing.call(depth0, "partial", "footer", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial || depth0.partial),stack1 ? stack1.call(depth0, "footer", options) : helperMissing.call(depth0, "partial", "footer", options))));
   data.buffer.push("\n</div>");
   return buffer;
   
 });
 
-Ember.TEMPLATES["confess"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["confess"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, hashContexts, hashTypes, escapeExpression=this.escapeExpression, self=this;
@@ -3361,7 +3363,8 @@ function program1(depth0,data) {
   
 });
 
-Ember.TEMPLATES["footer"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["footer"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, stack2, hashTypes, hashContexts, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
@@ -3425,32 +3428,33 @@ function program10(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "what", options) : helperMissing.call(depth0, "link-to", "what", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "what", options) : helperMissing.call(depth0, "link-to", "what", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("&nbsp;&sdot;\n  ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "terms", options) : helperMissing.call(depth0, "link-to", "terms", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "terms", options) : helperMissing.call(depth0, "link-to", "terms", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("&nbsp;&sdot;\n  ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "privacy", options) : helperMissing.call(depth0, "link-to", "privacy", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "privacy", options) : helperMissing.call(depth0, "link-to", "privacy", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("&nbsp;&sdot;\n  ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "use", options) : helperMissing.call(depth0, "link-to", "use", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "use", options) : helperMissing.call(depth0, "link-to", "use", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n</footer>");
   return buffer;
   
 });
 
-Ember.TEMPLATES["header"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["header"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, stack2, hashTypes, hashContexts, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
@@ -3487,7 +3491,7 @@ function program3(depth0,data) {
   options = {hash:{
     'classNames': ("btn btn-default")
   },inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n    ");
   hashContexts = {'classNames': depth0};
@@ -3495,14 +3499,15 @@ function program3(depth0,data) {
   options = {hash:{
     'classNames': ("btn btn-default")
   },inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "confess", options) : helperMissing.call(depth0, "link-to", "confess", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "confess", options) : helperMissing.call(depth0, "link-to", "confess", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n  </p>\n</header>");
   return buffer;
   
 });
 
-Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["index"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, stack2, hashContexts, hashTypes, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
@@ -3634,7 +3639,7 @@ function program13(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(14, program14, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || (depth0 && depth0['link-to'])),stack1 ? stack1.call(depth0, "confess", options) : helperMissing.call(depth0, "link-to", "confess", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "confess", options) : helperMissing.call(depth0, "link-to", "confess", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push(".</p>\n    ");
   return buffer;
@@ -3723,7 +3728,7 @@ function program20(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers['format-date'] || (depth0 && depth0['format-date'])),stack1 ? stack1.call(depth0, "timestamp", options) : helperMissing.call(depth0, "format-date", "timestamp", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers['format-date'] || depth0['format-date']),stack1 ? stack1.call(depth0, "timestamp", options) : helperMissing.call(depth0, "format-date", "timestamp", options))));
   data.buffer.push("</i></p>\n              </div>\n            ");
   return buffer;
   }
@@ -3787,7 +3792,7 @@ function program30(depth0,data) {
   options = {hash:{
     'class': (":secret-index nsaCheck showComments")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.bindAttr || (depth0 && depth0.bindAttr)),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bindAttr", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers.bindAttr || depth0.bindAttr),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bindAttr", options))));
   data.buffer.push(">\n  ");
   hashTypes = {};
   hashContexts = {};
@@ -3802,7 +3807,8 @@ function program30(depth0,data) {
   
 });
 
-Ember.TEMPLATES["messages"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["messages"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var stack1, hashTypes, hashContexts, escapeExpression=this.escapeExpression, self=this;
@@ -3848,7 +3854,8 @@ function program4(depth0,data) {
   
 });
 
-Ember.TEMPLATES["privacy"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["privacy"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
@@ -3858,7 +3865,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
-Ember.TEMPLATES["terms"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["terms"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
@@ -3868,7 +3876,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
-Ember.TEMPLATES["use"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["use"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
@@ -3878,7 +3887,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
-Ember.TEMPLATES["what"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+Ember.TEMPLATES["what"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data
+/**/) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
@@ -3942,5 +3952,5 @@ module.exports = function(SnapSecret) {
 };
 
 
-},{}]},{},["z64Kyl","8gSien","v9W4LI",11,"uCUMpF","FCE48o"])
+},{}]},{},["liJAYh","cURfcw","eYslUM","P3IKI0","yjRRnp",11])
 ;

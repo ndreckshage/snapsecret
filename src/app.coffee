@@ -2,13 +2,13 @@ express = require 'express'
 http = require 'http'
 path = require 'path'
 
+console.log(process.env)
+
 app = express()
 
 mongoose = require 'mongoose'
-if app.get('env') is 'development'
-  mongoose.connect 'mongodb://localhost/snapsecret'
-else
-  mongoose.connect 'mongodb://127.0.0.1/27017/snapsecret'
+mongoUri = "mongodb://#{process.env.SNAPSECRET_MONGO_PORT_27017_TCP_ADDR}:#{process.env.SNAPSECRET_MONGO_PORT_27017_TCP_PORT}/snapsecret?pass=#{process.env.SNAPSECRET_MONGO_ENV_MONGODB_PASS}"
+mongoose.connect mongoUri
 db = mongoose.connection
 db.on 'error', console.error.bind(console, 'connection error:')
 db.once 'open', () ->

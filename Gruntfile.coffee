@@ -5,7 +5,11 @@ vendor_js =
   bootstrap: './bower_components/bootstrap/js/tooltip.js'
   moment: './bower_components/momentjs/min/moment.min.js'
 
+loadGruntTasks = require('load-grunt-tasks')
+
 module.exports = (grunt) ->
+  loadGruntTasks(grunt)
+
   grunt.initConfig
     emberTemplates:
       compile:
@@ -77,12 +81,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-coffeelint'
 
   # official plugins
-  grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
   # register tasks
-  grunt.registerTask 'assets', ['coffeelint:client', 'emberTemplates', 'browserify', 'sass', 'cssmin']
-  grunt.registerTask 'build', ['coffeelint:server', 'coffee', 'assets']
+  grunt.registerTask 'assets', ['emberTemplates', 'browserify', 'sass', 'cssmin']
+  grunt.registerTask 'build', ['coffee', 'assets']
   grunt.registerTask 'default', ['watch']
