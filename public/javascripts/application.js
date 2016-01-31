@@ -2746,15 +2746,18 @@ var global=self;(function browserifyShim(module, exports, define, browserify_shi
 module.exports=require('yjRRnp');
 },{}],11:[function(require,module,exports){
 (function() {
-  var Ember, SnapSecret, host, io, moment, socket;
+  var Ember, SnapSecret, host, io, moment, secure, socket;
   Ember = require('ember');
   moment = require('moment');
   io = window.io;
-  host = location.origin.replace(/^https:\/\/www./, 'wss:\/\/');
+  secure = !!~location.origin.indexOf('https');
+  if (secure) {
+    host = location.origin.replace(/^https/, 'wss');
+  } else {
+    host = location.origin.replace(/^http/, 'ws');
+  }
   socket = io.connect(host, {
-    secure: true,
-    port: 443,
-    host: 'www.snapsecret.com'
+    secure: secure
   });
   window.SnapSecret = SnapSecret = Ember.Application.create();
   require('./controllers/application_controller.coffee')(SnapSecret, socket);
@@ -3956,5 +3959,5 @@ module.exports = function(SnapSecret) {
 };
 
 
-},{}]},{},["liJAYh","eYslUM","cURfcw","P3IKI0","yjRRnp",11])
+},{}]},{},["liJAYh","cURfcw","P3IKI0","eYslUM","yjRRnp",11])
 ;
