@@ -64,6 +64,7 @@ indexRoute = (req, res) ->
         secretTimes.push secret.created_at.getTime()
     res.render 'index',
       title: 'snapsecret'
+      cb: Date.now()
       activeSecret: JSON.stringify api.getActiveSecret()
       activeCommentCount: JSON.stringify api.getActiveCommentCount(req.ip)
       activeExpiry: JSON.stringify api.getActiveExpiry()
